@@ -1,0 +1,153 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3000982975127874715
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2429092050124529276}
+  - component: {fileID: 167813955871513602}
+  - component: {fileID: 6042501181998494966}
+  m_Layer: 0
+  m_Name: ImgFlaskMono_SaveImage
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2429092050124529276
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3000982975127874715}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.004880011, y: 0, z: -0.12881994}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1535196534467467526}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &167813955871513602
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3000982975127874715}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 602f546ef3a72214c9326c0af117b69d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_serverUrl: http://localhost:80
+  m_urlRelativePath: /image/save/png
+  m_onRequestCompleted:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6042501181998494966}
+        m_TargetAssemblyTypeName: Eloi.TextureToServer.ImgFlaskMono_DebugProcessImageRequest,
+          be.elab.texturetoserver
+        m_MethodName: PushIn
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
+  m_onValideCallbackReceived:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &6042501181998494966
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3000982975127874715}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6264b4639ea6b3f4480a247de079a439, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_processImageRequest:
+    m_timeStampSent: 0
+    m_timeStampReceived: 0
+    m_proceedTimeInMilliseconds: 0
+    m_image: {fileID: 0}
+    m_requestUrl: 
+    m_sentRequest: 0
+    m_errorHappened: 0
+    m_callbackReceived: 0
+    m_callbackText: 
+    m_errorText: 
+--- !u!1 &6385305356635655545
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1535196534467467526}
+  - component: {fileID: 8124439028049380395}
+  m_Layer: 0
+  m_Name: Texture for Debug
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1535196534467467526
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6385305356635655545}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2429092050124529276}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8124439028049380395
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6385305356635655545}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 930169b34dfd45444890e89c7914e84e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_textureToPush: {fileID: 2800000, guid: 5aec5d78516c965459f3f25466c36fad, type: 3}
+  m_onTexturePushed:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 167813955871513602}
+        m_TargetAssemblyTypeName: Eloi.TextureToServer.AbstractImageToFlaskDataUrlMono,
+          be.elab.texturetoserver
+        m_MethodName: BuildAndRunRequest
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1

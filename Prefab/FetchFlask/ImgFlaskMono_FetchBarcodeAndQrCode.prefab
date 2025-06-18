@@ -1,0 +1,157 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &4236654703526366349
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7615935165151385503}
+  - component: {fileID: 6995396308046991978}
+  m_Layer: 0
+  m_Name: Texture for Debug
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7615935165151385503
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4236654703526366349}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 379193905121417599}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6995396308046991978
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4236654703526366349}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 930169b34dfd45444890e89c7914e84e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_textureToPush: {fileID: 2800000, guid: 5aec5d78516c965459f3f25466c36fad, type: 3}
+  m_onTexturePushed:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3586962823033231314}
+        m_TargetAssemblyTypeName: Eloi.TextureToServer.AbstractImageToFlaskDataUrlMono,
+          be.elab.texturetoserver
+        m_MethodName: BuildAndRunRequest
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
+--- !u!1 &6386910576093794420
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 379193905121417599}
+  - component: {fileID: 3586962823033231314}
+  - component: {fileID: 5036277610567159983}
+  m_Layer: 0
+  m_Name: ImgFlaskMono_FetchBarcodeAndQrCode
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &379193905121417599
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6386910576093794420}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.004880011, y: 0, z: -0.12881994}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 7615935165151385503}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3586962823033231314
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6386910576093794420}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c799959ae9004a34e9aef9b5c87240e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_serverUrl: http://localhost:80
+  m_urlRelativePath: /image/post/get_scancode
+  m_onRequestCompleted:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5036277610567159983}
+        m_TargetAssemblyTypeName: Eloi.TextureToServer.ImgFlaskMono_DebugProcessImageRequest,
+          be.elab.texturetoserver
+        m_MethodName: PushIn
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
+  m_onValideCallbackReceived:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &5036277610567159983
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6386910576093794420}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6264b4639ea6b3f4480a247de079a439, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_processImageRequest:
+    m_timeStampSent: 1750192765750
+    m_timeStampReceived: 1750192766168
+    m_proceedTimeInMilliseconds: 418
+    m_image: {fileID: 2800000, guid: 5aec5d78516c965459f3f25466c36fad, type: 3}
+    m_requestUrl: http://localhost:80/image/post/get_scancode
+    m_sentRequest: 1
+    m_errorHappened: 0
+    m_callbackReceived: 1
+    m_callbackText: 'QRCODE:https://github.com/EloiStree/apint.io
+
+      CODE128:ABC-abc-1ABC
+
+'
+    m_errorText: 

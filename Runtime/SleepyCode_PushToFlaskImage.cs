@@ -4,6 +4,8 @@ using System.Net;
 using UnityEngine;
 using UnityEngine.XR;
 
+namespace Eloi.TextureToServer { 
+
 public class SleepyCode_PushToFlaskImage : MonoBehaviour
 {
 
@@ -73,9 +75,6 @@ public class SleepyCode_PushToFlaskImage : MonoBehaviour
 
     private IEnumerator SleepyCode_PushToFlaskImageCoroutine(string url, byte[] bytes)
     {
-
-        // use unity webrequest with coroutine
-
         using (var www = new UnityEngine.Networking.UnityWebRequest(url, "POST"))
         {
             www.uploadHandler = new UnityEngine.Networking.UploadHandlerRaw(bytes);
@@ -86,15 +85,15 @@ public class SleepyCode_PushToFlaskImage : MonoBehaviour
             if (www.result != UnityEngine.Networking.UnityWebRequest.Result.Success)
             {
                 m_errorText = www.error;
-                m_callbackText = "Error uploading image: " + www.error;
+                m_callbackText = "";
             }
             else
             {
-                m_callbackText = "Image uploaded successfully!";
+                m_callbackText = www.downloadHandler.text;
                 m_errorText = "";
             }
         }
-
-
     }
+}
+
 }

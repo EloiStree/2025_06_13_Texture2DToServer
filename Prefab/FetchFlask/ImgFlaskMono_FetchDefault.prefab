@@ -1,0 +1,153 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1131542995574285273
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3128056431805531111}
+  - component: {fileID: 5250086164718418149}
+  m_Layer: 0
+  m_Name: Texture for Debug
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3128056431805531111
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1131542995574285273}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8434267310384092898}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5250086164718418149
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1131542995574285273}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 930169b34dfd45444890e89c7914e84e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_textureToPush: {fileID: 2800000, guid: 5aec5d78516c965459f3f25466c36fad, type: 3}
+  m_onTexturePushed:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8692418790320107395}
+        m_TargetAssemblyTypeName: Eloi.TextureToServer.AbstractImageToFlaskDataUrlMono,
+          be.elab.texturetoserver
+        m_MethodName: BuildAndRunRequest
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
+--- !u!1 &8535946126709781497
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8434267310384092898}
+  - component: {fileID: 8692418790320107395}
+  - component: {fileID: 5342195406313279690}
+  m_Layer: 0
+  m_Name: ImgFlaskMono_FetchDefault
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8434267310384092898
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8535946126709781497}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.004880011, y: 0, z: -0.12881994}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 3128056431805531111}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8692418790320107395
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8535946126709781497}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 622d183a68a3c7a4ba21ae889479efa0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_serverUrl: http://localhost:80
+  m_urlRelativePath: /image/...
+  m_onRequestCompleted:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5342195406313279690}
+        m_TargetAssemblyTypeName: Eloi.TextureToServer.ImgFlaskMono_DebugProcessImageRequest,
+          be.elab.texturetoserver
+        m_MethodName: PushIn
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
+  m_onValideCallbackReceived:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &5342195406313279690
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8535946126709781497}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6264b4639ea6b3f4480a247de079a439, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_processImageRequest:
+    m_timeStampSent: 0
+    m_timeStampReceived: 0
+    m_proceedTimeInMilliseconds: 0
+    m_image: {fileID: 0}
+    m_requestUrl: 
+    m_sentRequest: 0
+    m_errorHappened: 0
+    m_callbackReceived: 0
+    m_callbackText: 
+    m_errorText: 
